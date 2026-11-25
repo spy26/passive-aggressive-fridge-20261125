@@ -18,6 +18,12 @@ NOTE = (
 
 
 def main() -> None:
+    if not NOTE.strip():
+        raise SystemExit("entry must not be empty or whitespace only")
+    if "\n" in NOTE or "\r" in NOTE:
+        raise SystemExit("entry must be a single line")
+    if not 1 <= len(NOTE) <= 200:
+        raise SystemExit("entry must be between 1 and 200 characters")
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     with open(os.path.join(out_dir, "entry.txt"), "w", encoding="utf-8") as f:
