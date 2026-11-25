@@ -12,7 +12,7 @@ no randomness, no clock.
 import os
 
 NOTE = (
-    "The milk expired Tuesday. You moved it to the back and hoped "
+    "The milk expired Tuesday. You hid it behind the yogurt and hoped "
     "I wouldn't notice. I notice everything. I am cold, not stupid."
 )
 
